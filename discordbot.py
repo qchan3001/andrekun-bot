@@ -6,7 +6,7 @@ import random
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-meigen = splitlines("""
+meigen = """
 「闘いのロマン」という引き出しこそ、もっとも開けて欲しいものなんだ。
 アドバルーンを上げれば何かが動き出す。
 もともとありもしない「限界」にこだわると、己れの力に疑問をもつようになり、しくじったり、できなかったとき、「ああ、これが俺の限界だ、もうダメだ」とギブアップしてしまう。
@@ -50,7 +50,7 @@ meigen = splitlines("""
 常識から1ミリでもいいから一歩踏み出せ。
 別れる時にはもう次の恋が始まっている。
 最終的に相手を認めていく。
-""")
+""".splitlines()
 
 
 @bot.event
