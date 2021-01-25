@@ -52,6 +52,7 @@ meigen = """
 最終的に相手を認めていく。
 """.splitlines()
 
+print(meigen)
 
 @bot.event
 async def on_message(message):
