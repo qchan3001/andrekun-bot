@@ -56,7 +56,7 @@ meigen = """
 @bot.event
 async def on_message(message):
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} 呼んだ？ {meigen[0]}'
+        reply = f'{message.author.mention} 呼んだ？ {meigen[5]}'
         await message.channel.send(reply)
         
 @bot.command()
