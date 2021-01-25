@@ -6,8 +6,7 @@ import random
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-meigen = """
-「闘いのロマン」という引き出しこそ、もっとも開けて欲しいものなんだ。
+meigen = """「闘いのロマン」という引き出しこそ、もっとも開けて欲しいものなんだ。
 アドバルーンを上げれば何かが動き出す。
 もともとありもしない「限界」にこだわると、己れの力に疑問をもつようになり、しくじったり、できなかったとき、「ああ、これが俺の限界だ、もうダメだ」とギブアップしてしまう。
 コンプレックスをバネに飛躍することができるのではないか。
@@ -52,12 +51,12 @@ meigen = """
 最終的に相手を認めていく。
 """.splitlines()
 
-print(meigen)
+
 
 @bot.event
 async def on_message(message):
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} 呼んだ？ {meigen[5]}'
+        reply = f'{message.author.mention} 呼んだ？ {meigen[random.randint(42)]}'
         await message.channel.send(reply)
         
 @bot.command()
