@@ -65,7 +65,7 @@ async def on_message(message):
    if message.content == "3" and counter == 1:
         counter = 0
         reply = f'{meigen[random.randint(0, 42)]}'
-        await message.channel.send('ダー-----!!¥n' + reply)
+        await message.channel.send('ダーーーーーーー！！！！！！！！！！！ /n' + reply)
     
 @bot.command()
 async def ping(ctx):
