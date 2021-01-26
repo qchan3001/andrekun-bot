@@ -5,7 +5,7 @@ import random
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+counter = 0
 meigen = """「闘いのロマン」という引き出しこそ、もっとも開けて欲しいものなんだ。
 アドバルーンを上げれば何かが動き出す。
 もともとありもしない「限界」にこだわると、己れの力に疑問をもつようになり、しくじったり、できなかったとき、「ああ、これが俺の限界だ、もうダメだ」とギブアップしてしまう。
@@ -55,10 +55,17 @@ meigen = """「闘いのロマン」という引き出しこそ、もっとも�
 
 @bot.event
 async def on_message(message):
-    if bot.user in message.mentions:
-        reply = f'{message.author.mention} {meigen[random.randint(0, 42)]}'
-        await message.channel.send(reply)
-        
+   # if bot.user in message.mentions:
+   #     reply = f'{message.author.mention} {meigen[random.randint(0, 42)]}'
+   #     await message.channel.send(reply)
+   if message.content == "1":
+        counter = 1
+        await message.channel.send("2!!")
+   if message.content == "3" and counter == 1:
+        counter = 0
+        reply = f'{meigen[random.randint(0, 42)]}'
+        await message.channel.send("ダー-----!!¥n" + reply)
+    
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
