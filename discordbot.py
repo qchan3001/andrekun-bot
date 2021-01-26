@@ -56,7 +56,7 @@ meigen = """「闘いのロマン」という引き出しこそ、もっとも�
 @bot.event
 async def on_message(message):
     if bot.user in message.mentions:
-        reply = f'{message.author.mention} 呼んだ？ {meigen[random.randint(0, 42)]}'
+        reply = f'{message.author.mention} {meigen[random.randint(0, 42)]}'
         await message.channel.send(reply)
         
 @bot.command()
