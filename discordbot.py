@@ -66,6 +66,8 @@ async def on_message(message):
         counter = 0
         reply = f'{meigen[random.randint(0, 42)]}'
         await message.channel.send('ダーーーーーーー！！！！！！！！！！！\n' + reply)
+   if message.content == "猪木" or message.content == "イノキ" or message.content == "いのき":
+        await message.channel.send('ボンバイエ!')
     
 @bot.command()
 async def ping(ctx):
