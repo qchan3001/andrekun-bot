@@ -55,9 +55,12 @@ meigen = """「闘いのロマン」という引き出しこそ、もっとも�
 
 @bot.event
 async def on_message(message):
-   # if bot.user in message.mentions:
-   #     reply = f'{message.author.mention} {meigen[random.randint(0, 42)]}'
-   #     await message.channel.send(reply)
+   if bot.user in message.mentions:
+      if random.random < 0.25:
+        reply = f'{message.author.mention} {meigen[random.randint(0, 42)]}'
+      else:
+        reply = f'{message.author.mention} なんだバカヤロー'
+      await message.channel.send(reply)
    global counter
    if message.content == "1":
         counter = 1
