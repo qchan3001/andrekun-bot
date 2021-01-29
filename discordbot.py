@@ -76,8 +76,5 @@ async def on_message(message):
 async def ping(ctx):
     await ctx.send('pong')
       
-@bot.command()
-async def help(ctx):
-    await ctx.send('help')
 
 bot.run(token)
